@@ -3,7 +3,6 @@
 """
 
 from typing import Iterable, Iterator
-from datetime import datetime
 
 
 def _get_indent(line: str) -> int:
@@ -62,8 +61,3 @@ def read_tree(lines: Iterable[str]) -> list[tuple[str, str | None]]:
         last_name = name
         last_indent = indent
     return result
-
-
-def format_date(date: datetime) -> str:
-    """Приводит дату к стандартному виду"""
-    return date.strftime('%Y-%m-%d')

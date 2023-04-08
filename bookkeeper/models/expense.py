@@ -4,13 +4,6 @@
 
 from dataclasses import dataclass, field
 from datetime import datetime
-from bookkeeper.utils import format_date
-
-
-def get_time_at_now() -> str:
-    """Docstring."""
-    date = datetime.now()
-    return format_date(date)
 
 
 @dataclass(slots=True)
@@ -26,7 +19,7 @@ class Expense:
     """
     amount: int
     category: int
-    expense_date: str = field(default_factory=get_time_at_now)
-    added_date: str = field(default_factory=get_time_at_now)
+    expense_date: datetime = field(default_factory=datetime.now)
+    added_date: datetime = field(default_factory=datetime.now)
     comment: str = ''
     pk: int = 0

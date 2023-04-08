@@ -1,3 +1,5 @@
 [FORMAT]
 good-names=pk,i,x
-extension-pkg-whitelist=PySide6
+
+[pylint]
+disable = too-many-instance-attributes, c-extension-no-member, missing-function-docstring, missing-module-docstring, too-many-public-methods
